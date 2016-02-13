@@ -1,4 +1,14 @@
-<form action="/users" method="post" accept-charset="UTF-8">
+<%= form_tag('/users') do %>
+  <%= label_tag('user[name]', "Your name:") %>
+  <%= text_field_tag('user[name]') %><br>
+  <%= label_tag('user[email]', "Your email:") %>
+  <%= email_field_tag('user[email]') %><br>
+  <%= label_tag('user[password]', "Password:") %>
+  <%= password_field_tag('user[password]') %><br>
+
+  <%= submit_tag 'Save'%>
+<% end %>
+<!-- <form action="/users" method="post" accept-charset="UTF-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="user_name">Your name:</label> 
   <input type="text" name="user[name]"><br>
@@ -7,4 +17,4 @@
   <label for="user_password">Password:</label>
   <input type="password" name="user[password]"><br>
   <input type="submit" value="Submit">
- </form> 
+ </form>  -->
