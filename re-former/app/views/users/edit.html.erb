@@ -1,0 +1,10 @@
+<%= form_for @user do |f| %>
+  <%= render 'shared/error_messages' %>
+  <%= f.label 'Your name:' %>
+  <%= f.text_field :name %><br>
+  <%= f.label 'Your email:' %>
+  <%= f.email_field :email, placeholder: 'example@example.com' %><br>
+  <%= f.label 'Your password:' %>
+  <%= f.password_field :password %><br>
+  <%= f.submit "Sign up" %>
+<% end %>
