@@ -6,8 +6,9 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       log_in user
-      flash.now[:notice] = "You're in!"
-      render :new
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+      flash[:notice] = "You're in!"
+      redirect_to root_path
     else
       flash.now[:alert] = "Invalid email/password."
       render :new
@@ -19,7 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out if logged_in?
-    flash.now[:notice] = "You're out!"
-    render :new
+    flash[:notice] = "You're out!"
+    redirect_to root_path
   end
 end

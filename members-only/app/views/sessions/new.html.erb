@@ -8,5 +8,13 @@
   <%= f.label :password %>
   <%= f.password_field :password %><br>
 
+  <%= f.label :remember_me do %>
+    <%= f.check_box :remember_me %>
+    <span>Remember me on this computer</span>
+  <% end %><br>
+
   <%= f.submit "Log in" %>
 <% end %>
+
+<br><%= link_to "See all posts", root_path %>
+<%= link_to "Create a new post", new_post_path if logged_in? %>

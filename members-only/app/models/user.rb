@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
+  has_many :posts
 
 
   before_create { self.remember_token = new_token }
@@ -11,5 +12,9 @@ class User < ActiveRecord::Base
 
   def remember
     update_attribute(:remember_token, new_token)
+  end
+
+  def forget
+    update_attribute(:remember_token, nil)
   end
 end
