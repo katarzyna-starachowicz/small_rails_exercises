@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<%= link_to 'Log in', login_path %>
+
+<%= link_to 'Log out', logout_path, method: :delete %>
+
+<%= flash.alert %>
+<%= flash.notice %>
+
 <%= yield %>
 
 </body>
