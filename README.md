@@ -9,3 +9,5 @@ very junior version of reddit (Active Record exercises), http://www.theodinproje
 forms exercises, http://www.theodinproject.com/ruby-on-rails/forms?ref=lc-pb
 ## members-only
 an exclusive clubhouse where members can write embarrassing posts about non-members (inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it), authentication exercises, http://www.theodinproject.com/ruby-on-rails/authentication?ref=lc-pb
+## private-events
+allows users to create events and then manage user signups, http://www.theodinproject.com/ruby-on-rails/associations?ref=lc-pb
