@@ -1,10 +1,11 @@
-<h1>Your events:</h1>
+<h1>All events:</h1>
 <ul>
   <% @events.each do |event| %>
     <li>
       <%= event.title %>
       <%= event.date %>
       <%= event.description %> 
+      <%= link_to 'See details', event_path(event) %>
     </li>
   <% end %>
 </ul>

@@ -16,5 +16,10 @@
 
 <%= yield %>
 
+<br><%= link_to 'See all events', events_path %>
+<% if current_user %>
+   | <%= link_to 'Create a new event', new_event_path %>
+<% end %>
+
 </body>
 </html>
