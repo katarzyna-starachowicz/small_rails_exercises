@@ -3,3 +3,10 @@
 Time: <%= @event.date %>
 Description: <%= @event.description %> 
 Creator: <%= @event.creator.name %> 
+<br>
+Attendees:
+<ul>
+  <% @event.attendees.each do |attendee| %>
+    <li><%= attendee.name %></li>
+  <% end %>
+</ul>
